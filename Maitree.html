@@ -5,41 +5,58 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>About | Maitree Health App</title>
   <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    /* Custom animations */
+    @keyframes fadeIn {
+      0% { opacity: 0; transform: translateY(20px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+
+    .fade-in {
+      animation: fadeIn 1s ease-out;
+    }
+  </style>
 </head>
 <body class="bg-gray-50 text-gray-800">
 
   <!-- About Section -->
-  <section class="max-w-7xl mx-auto px-4 py-16 flex flex-col md:flex-row items-center gap-10">
+  <section class="max-w-7xl mx-auto px-6 py-16 flex flex-col md:flex-row items-center gap-10">
     <!-- Image / Illustration -->
     <div class="w-full md:w-1/2">
       <img src="https://images.unsplash.com/photo-1588776814546-ec8d8f1d52b0?auto=format&fit=crop&w=800&q=80" 
            alt="Health & Wellness" 
-           class="rounded-2xl shadow-lg w-full object-cover">
+           class="rounded-2xl shadow-xl w-full object-cover transform transition-all duration-500 hover:scale-105">
     </div>
 
     <!-- Content -->
-    <div class="w-full md:w-1/2 space-y-5">
-      <h2 class="text-4xl md:text-5xl font-bold text-green-600">About Maitree</h2>
-      <p class="text-lg leading-relaxed">
+    <div class="w-full md:w-1/2 space-y-8 fade-in">
+      <h2 class="text-4xl md:text-5xl font-bold text-green-600">
+        About Maitree
+      </h2>
+      <p class="text-lg leading-relaxed text-gray-700">
         <strong>Maitree</strong> is your trusted companion for holistic health and wellness.  
         Designed to bring together technology and compassion, Maitree empowers you to track, understand, and improve your physical and mental well-being — all in one place.
       </p>
-      <p class="text-lg leading-relaxed">
+      <p class="text-lg leading-relaxed text-gray-700">
         From personalized health insights to mindful habits, Maitree goes beyond traditional apps by fostering a sense of community and support. Whether you're managing your fitness, mental health, or daily lifestyle — Maitree is here to grow with you.
       </p>
 
-      <div class="flex gap-4 pt-4">
+      <div class="flex gap-4 pt-8">
         <a href="#download" 
-           class="bg-green-600 text-white px-6 py-3 rounded-lg hover:bg-green-700 transition">
+           class="bg-green-600 text-white px-8 py-4 rounded-lg hover:bg-green-700 transition duration-300 ease-in-out transform hover:scale-105 shadow-md">
           Download App
         </a>
         <a href="#learn-more" 
-           class="border-2 border-green-600 text-green-600 px-6 py-3 rounded-lg hover:bg-green-50 transition">
+           class="border-2 border-green-600 text-green-600 px-8 py-4 rounded-lg hover:bg-green-50 transition duration-300 ease-in-out transform hover:scale-105 shadow-md">
           Learn More
         </a>
       </div>
     </div>
   </section>
+
+  <footer class="bg-green-600 text-white text-center py-6 mt-12">
+    <p>&copy; 2025 Maitree Health. All rights reserved.</p>
+  </footer>
 
 </body>
 </html>
