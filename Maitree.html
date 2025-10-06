@@ -1,197 +1,84 @@
 <!DOCTYPE html>
-<html lang="en-US">
+<html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <meta name="description" content="Maitree is your trusted companion for holistic health and wellness. Track and improve your physical and mental well-being with personalized insights and mindful habits."/>
-  <meta name="author" content="Maitree Health"/>
-  <title>About | Maitree Health App</title>
-  <script src="https://cdn.tailwindcss.com"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Maitree - About</title>
   <style>
-    /* Custom animations */
-    @keyframes fadeIn {
-      0% { opacity: 0; transform: translateY(20px); }
-      100% { opacity: 1; transform: translateY(0); }
+    body {
+      font-family: 'Segoe UI', Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f8fafc;
+      color: #333;
     }
-
-    .fade-in {
-      animation: fadeIn 1.5s ease-out;
+    header {
+      background-color: #007b5e;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      color: white;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 1.5rem;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin-left: 1.5rem;
+      font-weight: bold;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+    section {
+      max-width: 800px;
+      margin: 3rem auto;
+      background: white;
+      padding: 2rem;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+    h2 {
+      color: #007b5e;
+      text-align: center;
+      margin-bottom: 1.5rem;
+    }
+    html {
+      scroll-behavior: smooth;
     }
   </style>
 </head>
-<body class="bg-gray-50 text-gray-800">
-
-  <header class="bg-white shadow-sm">
-    <div class="max-w-7xl mx-auto px-6 py-4">
-      <nav class="flex justify-between items-center">
-        <span class="text-2xl font-bold text-green-600">Maitree Health</span>
-        <div class="space-x-4">
-          <a href="#" class="text-gray-600 hover:text-green-600">Home</a>
-          <a href="#" class="text-green-600 font-semibold">About</a>
-          <a href="#download" class="text-gray-600 hover:text-green-600">Download</a>
-        </div>
-      </nav>
-    </div>
+<body>
+  <header>
+    <h1>Maitree</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="#about">About</a>
+    </nav>
   </header>
 
-  <section class="max-w-7xl mx-auto px-6 py-16 flex flex-col md:flex-row items-center gap-10">
-    <div class="w-full md:w-1/2">
-      <img src="https://images.unsplash.com/photo-1588776814546-ec8d8f1d52b0?auto=format&fit=crop&w=800&q=80" 
-            alt="Health & Wellness, illustration of a person engaged in fitness or mindfulness" 
-            class="rounded-2xl shadow-xl w-full object-cover transform transition-all duration-500 hover:scale-105">
-    </div>
-
-    <div class="w-full md:w-1/2 space-y-8 fade-in">
-      <h2 class="text-4xl md:text-5xl font-bold text-green-600">
-        About Maitree
-      </h2>
-      <p class="text-lg leading-relaxed text-gray-700">
-        <strong>Maitree</strong> is your trusted companion for holistic health and wellness. 
-        Designed to bring together technology and compassion, Maitree empowers you to track, understand, and improve your physical and mental well-being — all in one place.
-      </p>
-      <p class="text-lg leading-relaxed text-gray-700">
-        From personalized health insights to mindful habits, Maitree goes beyond traditional apps by fostering a sense of community and support. Whether you're managing your fitness, mental health, or daily lifestyle — Maitree is here to grow with you.
-      </p>
-
-      <div class="flex gap-4 pt-8">
-        <a href="#download" 
-          class="bg-green-600 text-white px-8 py-4 rounded-lg hover:bg-green-700 transition duration-300 ease-in-out transform hover:scale-105 shadow-md">
-          Download App
-        </a>
-        <a href="#learn-more-details" 
-          class="border-2 border-green-600 text-green-600 px-8 py-4 rounded-lg hover:bg-green-50 transition duration-300 ease-in-out transform hover:scale-105 shadow-md">
-          See Our Mission
-        </a>
-      </div>
-    </div>
+  <section id="about">
+    <h2>About Maitree</h2>
+    <p>
+      Maitree is a pioneering rural healthcare app designed to bridge the critical gap 
+      between patients and emergency services. As the first of its kind in this segment, 
+      Maitree redefines accessibility and response time in rural healthcare delivery.
+    </p>
+    <p>
+      With smart digital integration, Maitree minimizes delays in patient–ambulance 
+      coordination, ensuring that medical help reaches faster than ever before. Its 
+      dedicated emergency button for drivers enables immediate alerts and quick 
+      response during critical situations, making every second count.
+    </p>
+    <p>
+      By digitalizing key healthcare processes, Maitree streamlines communication, 
+      documentation, and response systems — effectively cutting down time, effort, 
+      and confusion during emergencies.
+    </p>
+    <p><strong>Maitree — your trusted companion for faster, smarter, and more connected rural healthcare.</strong></p>
   </section>
-
-  <section id="learn-more-details" class="bg-white py-16">
-    <div class="max-w-7xl mx-auto px-6 text-center space-y-12">
-      <h3 class="text-4xl font-bold text-gray-800">Our Mission & Core Values</h3>
-      <p class="text-xl text-gray-600 max-w-3xl mx-auto">
-        Our commitment is to democratize wellness, making mindful living accessible, engaging, and deeply personal for everyone, everywhere.
-      </p>
-
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-10 mt-12">
-        <div class="p-6 bg-green-50 rounded-xl shadow-lg hover:shadow-xl transition duration-300 transform hover:-translate-y-1">
-          <div class="text-4xl text-green-600 mb-4">🌱</div>
-          <h4 class="text-2xl font-semibold text-gray-800 mb-3">Holistic Compassion</h4>
-          <p class="text-gray-600">
-            We focus on the complete person — mind, body, and spirit. We believe that true health stems from balance and understanding.
-          </p>
-        </div>
-        
-        <div class="p-6 bg-green-50 rounded-xl shadow-lg hover:shadow-xl transition duration-300 transform hover:-translate-y-1">
-          <div class="text-4xl text-green-600 mb-4">💡</div>
-          <h4 class="text-2xl font-semibold text-gray-800 mb-3">Data-Driven Clarity</h4>
-          <p class="text-gray-600">
-            Providing clear, actionable, and science-backed insights so you can make informed decisions about your well-being.
-          </p>
-        </div>
-
-        <div class="p-6 bg-green-50 rounded-xl shadow-lg hover:shadow-xl transition duration-300 transform hover:-translate-y-1">
-          <div class="text-4xl text-green-600 mb-4">🤝</div>
-          <h4 class="text-2xl font-semibold text-gray-800 mb-3">Supportive Community</h4>
-          <p class="text-gray-600">
-            Health is a journey best traveled together. We foster a positive, non-judgmental community environment for shared growth.
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section id="learn-more" class="py-16 bg-gray-100">
-    <div class="max-w-7xl mx-auto px-6 text-center">
-      <h3 class="text-4xl font-bold text-gray-800 mb-4">Why Choose Maitree?</h3>
-      <p class="text-lg text-gray-600 max-w-3xl mx-auto mb-12">
-        Maitree integrates cutting-edge features for tracking mental, physical, and lifestyle health, all in one easy-to-use platform.
-      </p>
-
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-        <div class="p-6 bg-white rounded-lg shadow-md text-center">
-            <span class="text-4xl text-green-500 block mb-3">❤️</span>
-            <h4 class="font-semibold text-xl mb-2">Mental Check-ins</h4>
-            <p class="text-gray-600 text-sm">Daily mood tracking and guided journals to monitor emotional health.</p>
-        </div>
-        <div class="p-6 bg-white rounded-lg shadow-md text-center">
-            <span class="text-4xl text-green-500 block mb-3">🏃</span>
-            <h4 class="font-semibold text-xl mb-2">Activity Tracker</h4>
-            <p class="text-gray-600 text-sm">Seamlessly track fitness goals, steps, and workout progress.</p>
-        </div>
-        <div class="p-6 bg-white rounded-lg shadow-md text-center">
-            <span class="text-4xl text-green-500 block mb-3">🥗</span>
-            <h4 class="font-semibold text-xl mb-2">Nutrition Logging</h4>
-            <p class="text-gray-600 text-sm">Simple, intuitive food logging and habit formation for better diet.</p>
-        </div>
-        <div class="p-6 bg-white rounded-lg shadow-md text-center">
-            <span class="text-4xl text-green-500 block mb-3">😴</span>
-            <h4 class="font-semibold text-xl mb-2">Sleep Optimization</h4>
-            <p class="text-gray-600 text-sm">Analyze sleep patterns and receive personalized tips for deeper rest.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="py-16 bg-green-50">
-    <div class="max-w-7xl mx-auto px-6 text-center">
-        <h3 class="text-4xl font-bold text-gray-800 mb-4">Meet the People Behind Maitree</h3>
-        <p class="text-lg text-gray-600 max-w-3xl mx-auto mb-12">
-            Maitree was founded by a team of wellness experts, technologists, and mental health advocates dedicated to changing how people manage their health.
-        </p>
-
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div class="bg-white p-6 rounded-lg shadow-md">
-                <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=150&h=150&q=80" alt="Team Member 1" class="w-24 h-24 rounded-full mx-auto object-cover mb-4"/>
-                <h4 class="font-bold text-lg">Anya Sharma</h4>
-                <p class="text-green-600">Co-founder & CEO</p>
-                <p class="text-sm text-gray-500 mt-2">Visionary behind holistic wellness technology.</p>
-            </div>
-            <div class="bg-white p-6 rounded-lg shadow-md">
-                <img src="https://images.unsplash.com/photo-1599566150163-479fc57d4529?auto=format&fit=crop&w=150&h=150&q=80" alt="Team Member 2" class="w-24 h-24 rounded-full mx-auto object-cover mb-4"/>
-                <h4 class="font-bold text-lg">Rohan Patel</h4>
-                <p class="text-green-600">Lead Product Developer</p>
-                <p class="text-sm text-gray-500 mt-2">Expert in AI-driven personalized health insights.</p>
-            </div>
-            <div class="bg-white p-6 rounded-lg shadow-md">
-                <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=150&h=150&q=80" alt="Team Member 3" class="w-24 h-24 rounded-full mx-auto object-cover mb-4"/>
-                <h4 class="font-bold text-lg">Dr. Chen Li</h4>
-                <p class="text-green-600">Chief Wellness Officer</p>
-                <p class="text-sm text-gray-500 mt-2">Certified psychiatrist and mindfulness coach.</p>
-            </div>
-        </div>
-    </div>
-  </section>
-
-  <section id="download" class="bg-green-600 py-16">
-    <div class="max-w-7xl mx-auto px-6 text-center text-white">
-      <h3 class="text-4xl font-bold">Start Your Journey Today</h3>
-      <p class="text-xl mt-4 max-w-3xl mx-auto">Download Maitree on iOS or Android and take the first step toward a more balanced and mindful life.</p>
-      <div class="mt-8 flex justify-center gap-6">
-        <a href="#" class="bg-white text-green-600 font-semibold px-8 py-4 rounded-lg shadow-xl hover:bg-gray-100 transition duration-300 transform hover:scale-105">
-          <svg class="inline-block w-5 h-5 mr-2 -mt-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M10 2a8 8 0 100 16 8 8 0 000-16zM6 9a2 2 0 114 0h-4zm8 0a2 2 0 11-4 0h4zm-4 7a4 4 0 100-8 4 4 0 000 8z"></path></svg>
-          Download on the App Store
-        </a>
-        <a href="#" class="bg-white text-green-600 font-semibold px-8 py-4 rounded-lg shadow-xl hover:bg-gray-100 transition duration-300 transform hover:scale-105 ml-4">
-          <svg class="inline-block w-5 h-5 mr-2 -mt-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M17.152 7.502L12.02 2.37A2.08 2.08 0 0010.5 2H2.5A.5.5 0 002 2.5v15a.5.5 0 00.5.5h8A2.08 2.08 0 0012.02 17.63l5.132-5.132A2.08 2.08 0 0017.5 11V8.5a.5.5 0 00-.348-.998zM11 16H3V4h8v12z"></path></svg>
-          Get it on Google Play
-        </a>
-      </div>
-    </div>
-  </section>
-
-  <footer class="bg-gray-800 text-white text-center py-8 mt-0">
-    <div class="max-w-7xl mx-auto px-6">
-      <p>&copy; 2025 Maitree Health. All rights reserved.</p>
-      <div class="mt-4 space-x-4">
-        <a href="#" class="text-white hover:text-green-400 transition duration-200">Privacy Policy</a>
-        <span class="text-gray-500">|</span>
-        <a href="#" class="text-white hover:text-green-400 transition duration-200">Terms of Service</a>
-        <span class="text-gray-500">|</span>
-        <a href="#" class="text-white hover:text-green-400 transition duration-200">Contact Us</a>
-      </div>
-    </div>
-  </footer>
-
 </body>
 </html>
