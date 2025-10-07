@@ -1,158 +1,266 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Maitree - About</title>
-  <style>
-    body {
-      font-family: 'Segoe UI', Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      background-color: #f8fafc;
-      color: #333;
-    }
-    header {
-      background-color: #007b5e;
-      padding: 1rem 2rem;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      color: white;
-    }
-    header h1 {
-      margin: 0;
-      font-size: 1.5rem;
-    }
-    nav a {
-      color: white;
-      text-decoration: none;
-      margin-left: 1.5rem;
-      font-weight: bold;
-    }
-    nav a:hover {
-      text-decoration: underline;
-    }
-    section {
-      max-width: 900px;
-      margin: 3rem auto;
-      background: white;
-      padding: 2rem;
-      border-radius: 12px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-    }
-    h2 {
-      color: #007b5e;
-      text-align: center;
-      margin-bottom: 1.5rem;
-    }
-    p {
-      line-height: 1.6;
-      margin-bottom: 1.2rem;
-    }
-    ul {
-      list-style-type: none;
-      padding: 0;
-    }
-    li {
-      padding: 8px 0;
-      margin: 5px 0;
-    }
-    html {
-      scroll-behavior: smooth;
-    }
-    footer {
-      background-color: #007b5e;
-      color: white;
-      text-align: center;
-      padding: 1rem 0;
-      position: absolute;
-      bottom: 0;
-      width: 100%;
-    }
-  </style>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Donation For Maitree — Donate for life</title>
+  <meta name="description" content="Donation For Maitree — saving lives through community donations, ambulance services, and medical assistance." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="icon" href="data:;base64,=">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="styles.css">
 </head>
-<body>
-  <header>
-    <h1>Maitree</h1>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="#about">About</a>
+<body class="antialiased text-gray-800 bg-gray-50">
+
+<header id="header" class="fixed w-full z-40 top-0 left-0 transition-all">
+  <nav id="navbar" class="max-w-screen-xl mx-auto flex items-center justify-between p-4 md:p-6 bg-transparent backdrop-blur-sm rounded-b transition-colors duration-300" aria-label="Primary Navigation">
+    <a class="flex items-center gap-3" href="#home">
+      <img src="img.jpg" alt="Donation For Maitree Logo" class="w-10 h-10 object-contain" />
+      <span class="text-lg md:text-xl font-bold text-blue-700">Donation For Maitree</span>
+    </a>
+
+      <!-- Desktop Links -->
+      <div class="hidden md:flex items-center gap-8">
+        <a class="nav-link hover:text-blue-600" href="#home">Home</a>
+        <a class="nav-link hover:text-blue-600" href="#donation">Donation</a>
+        <a class="nav-link hover:text-blue-600" href="#services">Services</a>
+        <a class="nav-link hover:text-blue-600" href="#about">About</a>
+        <a class="nav-link hover:text-blue-600" href="#contact">Contact</a>
+      </div>
+
+      <!-- Mobile Hamburger -->
+      <button id="mobileToggle" class="md:hidden p-2 rounded-lg focus:outline-none focus:ring-2" aria-expanded="false" aria-controls="mobileMenu" aria-label="Toggle menu">
+        <svg id="hamburgerIcon" class="w-7 h-7" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+      </button>
     </nav>
+
+    <!-- Mobile Menu -->
+    <div id="mobileMenu" class="hidden md:hidden bg-white/80 backdrop-blur-sm border-t border-gray-200">
+      <div class="max-w-screen-xl mx-auto p-4 flex flex-col gap-3">
+        <a class="py-2 px-3 rounded-md nav-link block" href="#home">Home</a>
+        <a class="py-2 px-3 rounded-md nav-link block" href="#donation">Donation</a>
+        <a class="py-2 px-3 rounded-md nav-link block" href="#services">Services</a>
+        <a class="py-2 px-3 rounded-md nav-link block" href="#about">About</a>
+        <a class="py-2 px-3 rounded-md nav-link block" href="#contact">Contact</a>
+      </div>
+    </div>
   </header>
 
-  <section id="about">
-    <h2>About Maitree</h2>
-    <p>
-      Maitree is a pioneering rural healthcare app designed to bridge the critical gap 
-      between patients and emergency services, especially in underserved and remote areas. 
-      As the first of its kind in this segment, Maitree redefines accessibility, improving 
-      response time, and ensuring healthcare services are closer to those who need them most.
-    </p>
-    <p>
-      In rural communities, delays in accessing timely healthcare can be life-threatening. 
-      Maitree addresses this issue by providing a real-time digital platform that connects 
-      patients directly with emergency services such as ambulances and healthcare professionals, 
-      minimizing the time it takes for help to arrive.
-    </p>
-    <p>
-      Key features include a user-friendly emergency button for drivers, which sends immediate alerts 
-      to the nearest healthcare facilities and ambulances. This critical functionality ensures faster 
-      response times during high-pressure situations, where every second counts. The app also enables 
-      real-time tracking of ambulance locations, giving families peace of mind and better situational awareness.
-    </p>
-    <p>
-      In addition, Maitree integrates essential healthcare processes like documentation and communication, 
-      allowing healthcare providers to receive critical patient information ahead of time. This integration 
-      helps reduce errors, confusion, and time delays, ensuring that the medical team is prepared as soon as 
-      they arrive on the scene.
-    </p>
-    <p>
-      Maitree’s mission is to bring smarter, more connected healthcare solutions to rural areas, 
-      empowering both patients and healthcare providers to respond faster and more effectively. 
-      Whether it’s a minor emergency or a life-threatening situation, Maitree is committed to making 
-      rural healthcare more accessible, reliable, and efficient.
-    </p>
-    <p><strong>Maitree — your trusted companion for faster, smarter, and more connected rural healthcare.</strong></p>
-  </section>
+  <main class="pt-24">
 
-  <section id="team">
-    <h2>The Team Behind Maitree</h2>
-    <p>
-      Maitree was developed by <strong>Innorepple</strong>, a team of passionate and dedicated professionals 
-      who are committed to transforming rural healthcare through innovative technology. Our team consists of 
-      experienced software engineers, healthcare experts, and product designers working together to create 
-      a platform that can save lives and improve the quality of healthcare delivery.
-    </p>
-    <p>
-      We are a diverse group, united by our shared mission to make healthcare more accessible and efficient 
-      for people in remote areas. The team’s collective experience in technology and healthcare helps ensure 
-      that Maitree is both practical and effective in real-world emergency situations.
-    </p>
-    <ul>
-      <li><strong>John Doe</strong> - CEO & Co-Founder: A visionary in the healthcare technology space, John 
-        leads the team with a focus on developing innovative solutions that tackle real-world problems in healthcare.</li>
-      <li><strong>Jane Smith</strong> - CTO & Co-Founder: Jane brings a wealth of experience in software engineering, 
-        leading the technical development of Maitree and ensuring seamless integration with healthcare systems.</li>
-      <li><strong>Ravi Kumar</strong> - Healthcare Specialist: With a background in emergency medicine, Ravi ensures 
-        that Maitree’s features align with real-life medical practices and enhance emergency response effectiveness.</li>
-      <li><strong>Amy Lee</strong> - UX/UI Designer: Amy’s expertise in user experience design ensures that Maitree is 
-        intuitive, easy to use, and accessible to users with varying levels of tech-savviness.</li>
-      <li><strong>Arvind Patel</strong> - Mobile App Developer: Arvind specializes in mobile app development, ensuring 
-        that Maitree is optimized for both Android and iOS platforms to reach a wide audience.</li>
-      <li><strong>Emily Green</strong> - Marketing and Outreach: Emily drives awareness and adoption of Maitree, 
-        collaborating with healthcare providers and rural communities to ensure the app reaches those who need it most.</li>
-    </ul>
-    <p>
-      Together, we are committed to using technology to solve one of healthcare’s biggest challenges — delivering 
-      timely care to those who need it most. We are proud to have created Maitree, and we look forward to its impact 
-      on rural healthcare systems worldwide.
-    </p>
-  </section>
+    <!-- Hero -->
+<section id="home" 
+  class="relative h-[80vh] flex items-center justify-center bg-cover bg-center bg-no-repeat" 
+  style="background-image: url('https://source.unsplash.com/1600x900/?charity,help');">
+  
+  <!-- Dark overlay for text visibility -->
+  <div class="absolute inset-0 bg-black/50"></div>
 
-  <footer>
-    <p>&copy; 2025 Maitree by Innorepple. All Rights Reserved.</p>
+  <!-- Hero Text -->
+  <div class="relative text-center text-white px-4 hero-content space-y-6">
+    <span class="inline-block px-3 py-1 rounded-full bg-white/20 backdrop-blur-sm text-white text-sm font-medium">
+      Non-profit
+    </span>
+
+    <h1 class="text-3xl md:text-6xl font-extrabold leading-tight">
+      Donation For Maitree — <span class="text-blue-400">Donate for life</span>
+    </h1>
+
+    <p class="max-w-2xl mx-auto text-base md:text-lg text-gray-200">
+      We provide ambulance services, medical support and awareness programs. Your donation helps save lives and build sustainable community support.
+    </p>
+
+    <div class="flex flex-wrap justify-center gap-4 mt-6">
+      <a id="donateOpen" href="#donation" class="btn-primary inline-flex items-center gap-2 px-6 py-3 rounded-lg shadow hover:shadow-lg">
+        Donate Now
+      </a>
+      <a href="#about" class="btn-ghost text-white border border-white hover:bg-white/10 inline-flex items-center gap-2 px-6 py-3 rounded-lg">
+        Learn More
+      </a>
+    </div>
+
+    <div class="flex items-center justify-center gap-3 text-sm text-gray-300 mt-6">
+      <svg class="w-5 h-5 text-green-400" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M12 2L3 7v7c0 5 3.8 9.7 9 11 5.2-1.3 9-6 9-11V7l-9-5z"/>
+      </svg>
+      <span>100% of donations go to our life-saving programs.</span>
+    </div>
+  </div>
+</section>
+
+
+    <!-- Donation -->
+    <section id="donation" class="py-16">
+      <div class="max-w-screen-xl mx-auto px-6 md:px-8">
+        <div class="text-center mb-8">
+          <h2 class="text-3xl md:text-4xl font-bold text-blue-600">Donation</h2>
+          <p class="text-gray-600 mt-2 max-w-2xl mx-auto">Support our mission. Choose a quick amount or enter a custom donation. Every rupee helps.</p>
+        </div>
+
+        <div class="flex flex-col md:flex-row gap-6 items-start justify-center">
+          <div class="bg-white p-6 rounded-xl shadow-md w-full md:w-2/5">
+            <h3 class="text-xl font-semibold">Quick Donate</h3>
+            <p class="text-gray-600 text-sm mt-1">Select a preset amount</p>
+
+            <div class="mt-4 grid grid-cols-3 gap-3">
+              <button class="preset btn-amount">₹250</button>
+              <button class="preset btn-amount">₹500</button>
+              <button class="preset btn-amount">₹1000</button>
+              <button class="preset btn-amount" data-custom="true">Custom</button>
+            </div>
+
+            <div class="mt-4">
+              <label for="customAmount" class="text-sm text-gray-700">Custom Amount (₹)</label>
+              <div class="mt-2 flex gap-2">
+                <input id="customAmount" type="number" min="1" placeholder="Enter amount" class="input-basic w-full" />
+                <button id="donateBtn" class="btn-primary px-4">Donate</button>
+              </div>
+            </div>
+
+            <p class="text-xs text-gray-500 mt-3">This example does not process payments. Wire up your payment gateway (Razorpay/Stripe/Paytm) to the donate button.</p>
+          </div>
+
+          <div class="bg-white p-6 rounded-xl shadow-md w-full md:w-3/5">
+            <h3 class="text-xl font-semibold">Why your help matters</h3>
+            <ul class="mt-4 space-y-3 text-gray-600">
+              <li>• Rapid ambulance deployment for emergencies</li>
+              <li>• Medical aid and arrangement of treatments</li>
+              <li>• Community awareness and prevention programs</li>
+            </ul>
+
+            <div class="mt-6 grid md:grid-cols-3 gap-4">
+              <div class="p-4 border rounded-lg text-center">
+                <div class="text-2xl font-bold text-blue-600">24/7</div>
+                <div class="text-sm text-gray-600">Ambulance service</div>
+              </div>
+              <div class="p-4 border rounded-lg text-center">
+                <div class="text-2xl font-bold text-blue-600">100%</div>
+                <div class="text-sm text-gray-600">Funds to beneficiaries</div>
+              </div>
+              <div class="p-4 border rounded-lg text-center">
+                <div class="text-2xl font-bold text-blue-600">Trusted</div>
+                <div class="text-sm text-gray-600">Community partners</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services -->
+    <section id="services" class="py-16 bg-white">
+      <div class="max-w-screen-xl mx-auto px-6 md:px-8 text-center">
+        <h2 class="text-3xl font-bold text-blue-600">Our Services</h2>
+        <p class="text-gray-600 max-w-2xl mx-auto mt-2">Helping communities through direct support and education.</p>
+
+        <div class="grid md:grid-cols-3 gap-8 mt-8">
+          <article class="p-6 bg-gray-50 rounded-xl shadow-sm">
+            <h3 class="font-semibold">Emergency Ambulance</h3>
+            <p class="text-gray-600 mt-2">Rapid transport and triage to save lives when minutes matter.</p>
+          </article>
+          <article class="p-6 bg-gray-50 rounded-xl shadow-sm">
+            <h3 class="font-semibold">Medical Assistance</h3>
+            <p class="text-gray-600 mt-2">Connecting patients with donors and hospitals for urgent care.</p>
+          </article>
+          <article class="p-6 bg-gray-50 rounded-xl shadow-sm">
+            <h3 class="font-semibold">Awareness Programs</h3>
+            <p class="text-gray-600 mt-2">Workshops and campaigns that build resilient communities.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section id="about" class="py-16">
+      <div class="max-w-screen-xl mx-auto px-6 md:px-8 text-center">
+        <h2 class="text-3xl font-bold text-blue-600">About Us</h2>
+        <p class="text-gray-600 max-w-3xl mx-auto mt-4">Donation For Maitree is a volunteer-driven non-profit focused on emergency medical services and community wellbeing. We aim to ensure help reaches those who need it most.</p>
+      </div>
+    </section>
+
+    <!-- Advertisement / Partnerships -->
+    <section id="partners" class="py-16 bg-white">
+      <div class="max-w-screen-xl mx-auto px-6 md:px-8">
+        <h2 class="text-3xl font-bold text-blue-600 text-center">Partnerships & Advertisements</h2>
+        <p class="text-gray-600 text-center mt-2">Partner with us to create impact.</p>
+
+        <div class="grid md:grid-cols-2 gap-6 mt-8">
+          <div class="p-6 border rounded-xl shadow-sm">
+            <img src="https://source.unsplash.com/800x500/?business,corporate" alt="corporate partnership" class="rounded-lg w-full h-44 object-cover" />
+            <h3 class="mt-4 font-semibold">Corporate Partnerships</h3>
+            <p class="text-gray-600 mt-1">Collaborate on CSR initiatives that deliver measurable outcomes.</p>
+          </div>
+          <div class="p-6 border rounded-xl shadow-sm">
+            <img src="https://source.unsplash.com/800x500/?startup,advertisement" alt="small business ads" class="rounded-lg w-full h-44 object-cover" />
+            <h3 class="mt-4 font-semibold">Small Business Ads</h3>
+            <p class="text-gray-600 mt-1">Affordable ad spaces to support local enterprises and our work.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="py-16 bg-gray-100">
+      <div class="max-w-screen-xl mx-auto px-6 md:px-8">
+        <div class="grid md:grid-cols-2 gap-8 items-center">
+          <div>
+            <h2 class="text-3xl font-bold text-blue-600">Get in touch</h2>
+            <p class="text-gray-600 mt-2">Questions about donations, partnerships, or volunteering? Drop us a message.</p>
+
+            <form id="contactForm" class="mt-6 space-y-4" action="#" method="post" onsubmit="event.preventDefault(); alert('This is a demo form. Replace with your backend endpoint.');">
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
+                <input name="name" required placeholder="Your name" class="input-basic" />
+                <input name="email" type="email" required placeholder="Email address" class="input-basic" />
+              </div>
+              <textarea name="message" required placeholder="How can we help?" rows="5" class="input-basic w-full"></textarea>
+              <div class="flex items-center gap-3">
+                <button type="submit" class="btn-primary px-5 py-3">Send Message</button>
+                <button type="reset" class="btn-ghost px-4 py-3">Reset</button>
+              </div>
+            </form>
+          </div>
+
+          <div class="bg-white p-6 rounded-xl shadow-md">
+            <h3 class="font-semibold">Contact Details</h3>
+            <p class="text-sm text-gray-600 mt-2">For partnerships and press, email us or use the contact form.</p>
+            <ul class="mt-4 space-y-2 text-gray-700">
+              <li><strong>Email:</strong> <a href="MaitreeeOfficial@gmail.com" class="text-blue-600">MaitreeeOfficial@gmail.com</a></li>
+              <li><strong>Phone:</strong> <a href="tel:+91 8483090562" class="text-blue-600">+91 84830 90562</a></li>
+              <li><strong>Address:</strong> Willington Near Ajeenkya DY Patil University , Pune</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="bg-gray-900 text-gray-300 py-8">
+    <div class="max-w-screen-xl mx-auto px-6 md:px-8 grid md:grid-cols-3 gap-6">
+      <div>
+        <h4 class="text-white font-semibold">Donation For Maitree</h4>
+        <p class="text-sm italic mt-2">Donate for life</p>
+      </div>
+      <div>
+        <h4 class="text-white font-semibold">Quick Links</h4>
+        <ul class="mt-2 space-y-1 text-sm">
+          <li><a class="hover:text-white" href="#home">Home</a></li>
+          <li><a class="hover:text-white" href="#donation">Donation</a></li>
+          <li><a class="hover:text-white" href="#services">Services</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="text-white font-semibold">Other Services</h4>
+        <ul class="mt-2 space-y-1 text-sm">
+          <li><a class="hover:text-white" href="https://drive.google.com/file/d/19gVx-7KVqoskmX7LBQw_AkYBIqraeVGC/view?usp=sharing" target="_blank" rel="noopener noreferrer">User App</a></li>
+          <li><a class="hover:text-white" href="https://drive.google.com/file/d/1hoil-S03aAHnWUy0gtUdFInGVHblIeE7/view?usp=drive_link" target="_blank" rel="noopener noreferrer">Ambulance Driver App</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="text-center text-sm text-gray-500 mt-6">© 2025 Donation For Maitree. All Rights Reserved.</div>
   </footer>
 
+  <script src="script.js" defer></script>
 </body>
 </html>
+ Make it responsive for all devices and add more details , make it better
