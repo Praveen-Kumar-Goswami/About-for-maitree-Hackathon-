@@ -1,266 +1,587 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Donation For Maitree — Donate for life</title>
-  <meta name="description" content="Donation For Maitree — saving lives through community donations, ambulance services, and medical assistance." />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="icon" href="data:;base64,=">
-  <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maitree - About </title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        :root {
+            --primary: rgb(96, 165, 250);
+            --primary-light: rgb(147, 197, 253);
+            --primary-dark: rgb(59, 130, 246);
+            --secondary: #ff9800;
+            --text: #333;
+            --text-light: #666;
+            --background: #f8f9fa;
+            --white: #ffffff;
+            --shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        body {
+            background-color: var(--background);
+            color: var(--text);
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header Styles */
+        header {
+            background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+            color: var(--white);
+            padding: 1rem 0;
+            box-shadow: var(--shadow);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo-img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        .logo h1 {
+            font-size: 1.8rem;
+            font-weight: 700;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        nav a {
+            color: var(--white);
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            padding: 5px 10px;
+            border-radius: 4px;
+        }
+
+        nav a:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+
+        .cta-button {
+            background-color: var(--secondary);
+            color: var(--white);
+            border: none;
+            padding: 10px 20px;
+            border-radius: 50px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .cta-button:hover {
+            background-color: #e68900;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(96, 165, 250, 0.9), rgba(59, 130, 246, 0.9)), url('https://images.unsplash.com/photo-1582750433449-648ed127bb54?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80');
+            background-size: cover;
+            background-position: center;
+            color: var(--white);
+            padding: 5rem 0;
+            text-align: center;
+        }
+
+        .hero h2 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 0 auto 2rem;
+        }
+
+        /* Features Section */
+        .features {
+            padding: 5rem 0;
+            background-color: var(--white);
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .section-title h2 {
+            font-size: 2.5rem;
+            color: var(--primary);
+            margin-bottom: 1rem;
+        }
+
+        .section-title p {
+            color: var(--text-light);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .feature-card {
+            background: var(--white);
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: transform 0.3s ease;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .feature-img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .feature-content {
+            padding: 1.5rem;
+        }
+
+        .feature-content h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: var(--primary);
+        }
+
+        /* How It Works Section */
+        .how-it-works {
+            padding: 5rem 0;
+            background-color: var(--background);
+        }
+
+        .steps {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            margin-top: 3rem;
+        }
+
+        .step {
+            flex: 1;
+            min-width: 250px;
+            text-align: center;
+            padding: 0 1rem;
+            margin-bottom: 2rem;
+        }
+
+        .step-number {
+            background-color: var(--primary);
+            color: var(--white);
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin: 0 auto 1rem;
+        }
+
+        .step h3 {
+            margin-bottom: 1rem;
+            color: var(--primary);
+        }
+
+        /* Download Section */
+        .download {
+            padding: 5rem 0;
+            background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+            color: var(--white);
+            text-align: center;
+        }
+
+        .download h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .download p {
+            max-width: 600px;
+            margin: 0 auto 2rem;
+            font-size: 1.1rem;
+        }
+
+        .app-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .app-button {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            background-color: var(--white);
+            color: var(--text);
+            padding: 12px 25px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .app-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        .app-button i {
+            font-size: 1.5rem;
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--primary-dark);
+            color: var(--white);
+            padding: 3rem 0 1rem;
+        }
+
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            margin-bottom: 2rem;
+        }
+
+        .footer-column {
+            flex: 1;
+            min-width: 200px;
+            margin-bottom: 2rem;
+        }
+
+        .footer-column h3 {
+            margin-bottom: 1.5rem;
+            font-size: 1.2rem;
+        }
+
+        .footer-column ul {
+            list-style: none;
+        }
+
+        .footer-column ul li {
+            margin-bottom: 0.8rem;
+        }
+
+        .footer-column a {
+            color: #ccc;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer-column a:hover {
+            color: var(--white);
+        }
+
+        .social-icons {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .social-icons a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            transition: all 0.3s ease;
+        }
+
+        .social-icons a:hover {
+            background-color: var(--secondary);
+            transform: translateY(-3px);
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            font-size: 0.9rem;
+            color: #ccc;
+        }
+
+        .innorepples {
+            text-align: center;
+            margin-top: 1rem;
+            font-weight: bold;
+            font-size: 1.1rem;
+            color: var(--secondary);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            nav ul {
+                gap: 1rem;
+            }
+
+            .hero h2 {
+                font-size: 2.2rem;
+            }
+
+            .steps {
+                flex-direction: column;
+            }
+
+            .footer-content {
+                flex-direction: column;
+            }
+        }
+    </style>
 </head>
-<body class="antialiased text-gray-800 bg-gray-50">
-
-<header id="header" class="fixed w-full z-40 top-0 left-0 transition-all">
-  <nav id="navbar" class="max-w-screen-xl mx-auto flex items-center justify-between p-4 md:p-6 bg-transparent backdrop-blur-sm rounded-b transition-colors duration-300" aria-label="Primary Navigation">
-    <a class="flex items-center gap-3" href="#home">
-      <img src="img.jpg" alt="Donation For Maitree Logo" class="w-10 h-10 object-contain" />
-      <span class="text-lg md:text-xl font-bold text-blue-700">Donation For Maitree</span>
-    </a>
-
-      <!-- Desktop Links -->
-      <div class="hidden md:flex items-center gap-8">
-        <a class="nav-link hover:text-blue-600" href="#home">Home</a>
-        <a class="nav-link hover:text-blue-600" href="#donation">Donation</a>
-        <a class="nav-link hover:text-blue-600" href="#services">Services</a>
-        <a class="nav-link hover:text-blue-600" href="#about">About</a>
-        <a class="nav-link hover:text-blue-600" href="#contact">Contact</a>
-      </div>
-
-      <!-- Mobile Hamburger -->
-      <button id="mobileToggle" class="md:hidden p-2 rounded-lg focus:outline-none focus:ring-2" aria-expanded="false" aria-controls="mobileMenu" aria-label="Toggle menu">
-        <svg id="hamburgerIcon" class="w-7 h-7" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
-      </button>
-    </nav>
-
-    <!-- Mobile Menu -->
-    <div id="mobileMenu" class="hidden md:hidden bg-white/80 backdrop-blur-sm border-t border-gray-200">
-      <div class="max-w-screen-xl mx-auto p-4 flex flex-col gap-3">
-        <a class="py-2 px-3 rounded-md nav-link block" href="#home">Home</a>
-        <a class="py-2 px-3 rounded-md nav-link block" href="#donation">Donation</a>
-        <a class="py-2 px-3 rounded-md nav-link block" href="#services">Services</a>
-        <a class="py-2 px-3 rounded-md nav-link block" href="#about">About</a>
-        <a class="py-2 px-3 rounded-md nav-link block" href="#contact">Contact</a>
-      </div>
-    </div>
-  </header>
-
-  <main class="pt-24">
-
-    <!-- Hero -->
-<section id="home" 
-  class="relative h-[80vh] flex items-center justify-center bg-cover bg-center bg-no-repeat" 
-  style="background-image: url('https://source.unsplash.com/1600x900/?charity,help');">
-  
-  <!-- Dark overlay for text visibility -->
-  <div class="absolute inset-0 bg-black/50"></div>
-
-  <!-- Hero Text -->
-  <div class="relative text-center text-white px-4 hero-content space-y-6">
-    <span class="inline-block px-3 py-1 rounded-full bg-white/20 backdrop-blur-sm text-white text-sm font-medium">
-      Non-profit
-    </span>
-
-    <h1 class="text-3xl md:text-6xl font-extrabold leading-tight">
-      Donation For Maitree — <span class="text-blue-400">Donate for life</span>
-    </h1>
-
-    <p class="max-w-2xl mx-auto text-base md:text-lg text-gray-200">
-      We provide ambulance services, medical support and awareness programs. Your donation helps save lives and build sustainable community support.
-    </p>
-
-    <div class="flex flex-wrap justify-center gap-4 mt-6">
-      <a id="donateOpen" href="#donation" class="btn-primary inline-flex items-center gap-2 px-6 py-3 rounded-lg shadow hover:shadow-lg">
-        Donate Now
-      </a>
-      <a href="#about" class="btn-ghost text-white border border-white hover:bg-white/10 inline-flex items-center gap-2 px-6 py-3 rounded-lg">
-        Learn More
-      </a>
-    </div>
-
-    <div class="flex items-center justify-center gap-3 text-sm text-gray-300 mt-6">
-      <svg class="w-5 h-5 text-green-400" viewBox="0 0 24 24" fill="currentColor">
-        <path d="M12 2L3 7v7c0 5 3.8 9.7 9 11 5.2-1.3 9-6 9-11V7l-9-5z"/>
-      </svg>
-      <span>100% of donations go to our life-saving programs.</span>
-    </div>
-  </div>
-</section>
-
-
-    <!-- Donation -->
-    <section id="donation" class="py-16">
-      <div class="max-w-screen-xl mx-auto px-6 md:px-8">
-        <div class="text-center mb-8">
-          <h2 class="text-3xl md:text-4xl font-bold text-blue-600">Donation</h2>
-          <p class="text-gray-600 mt-2 max-w-2xl mx-auto">Support our mission. Choose a quick amount or enter a custom donation. Every rupee helps.</p>
-        </div>
-
-        <div class="flex flex-col md:flex-row gap-6 items-start justify-center">
-          <div class="bg-white p-6 rounded-xl shadow-md w-full md:w-2/5">
-            <h3 class="text-xl font-semibold">Quick Donate</h3>
-            <p class="text-gray-600 text-sm mt-1">Select a preset amount</p>
-
-            <div class="mt-4 grid grid-cols-3 gap-3">
-              <button class="preset btn-amount">₹250</button>
-              <button class="preset btn-amount">₹500</button>
-              <button class="preset btn-amount">₹1000</button>
-              <button class="preset btn-amount" data-custom="true">Custom</button>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container header-content">
+            <div class="logo">
+                <img src="https://via.placeholder.com/50x50/60a5fa/ffffff?text=M" alt="Maitree Logo" class="logo-img">
+                <h1>Maitree</h1>
             </div>
+            <nav>
+                <ul>
+                    <li><a href="#features">Features</a></li>
+                    <li><a href="#how-it-works">How It Works</a></li>
+                    <li><a href="#download">Download</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <button class="cta-button">Get Help Now</button>
+        </div>
+    </header>
 
-            <div class="mt-4">
-              <label for="customAmount" class="text-sm text-gray-700">Custom Amount (₹)</label>
-              <div class="mt-2 flex gap-2">
-                <input id="customAmount" type="number" min="1" placeholder="Enter amount" class="input-basic w-full" />
-                <button id="donateBtn" class="btn-primary px-4">Donate</button>
-              </div>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h2>Your Village Health Companion</h2>
+            <p>Maitree brings essential healthcare services to rural communities, saving precious time in emergencies and promoting wellness for all.</p>
+            <button class="cta-button">Request Ambulance</button>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features" id="features">
+        <div class="container">
+            <div class="section-title">
+                <h2>How Maitree Helps</h2>
+                <p>Designed specifically for rural communities with limited healthcare access</p>
             </div>
-
-            <p class="text-xs text-gray-500 mt-3">This example does not process payments. Wire up your payment gateway (Razorpay/Stripe/Paytm) to the donate button.</p>
-          </div>
-
-          <div class="bg-white p-6 rounded-xl shadow-md w-full md:w-3/5">
-            <h3 class="text-xl font-semibold">Why your help matters</h3>
-            <ul class="mt-4 space-y-3 text-gray-600">
-              <li>• Rapid ambulance deployment for emergencies</li>
-              <li>• Medical aid and arrangement of treatments</li>
-              <li>• Community awareness and prevention programs</li>
-            </ul>
-
-            <div class="mt-6 grid md:grid-cols-3 gap-4">
-              <div class="p-4 border rounded-lg text-center">
-                <div class="text-2xl font-bold text-blue-600">24/7</div>
-                <div class="text-sm text-gray-600">Ambulance service</div>
-              </div>
-              <div class="p-4 border rounded-lg text-center">
-                <div class="text-2xl font-bold text-blue-600">100%</div>
-                <div class="text-sm text-gray-600">Funds to beneficiaries</div>
-              </div>
-              <div class="p-4 border rounded-lg text-center">
-                <div class="text-2xl font-bold text-blue-600">Trusted</div>
-                <div class="text-sm text-gray-600">Community partners</div>
-              </div>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <img src="https://images.unsplash.com/photo-1579684385127-1ef15d508118?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Ambulance Service" class="feature-img">
+                    <div class="feature-content">
+                        <h3>Fast Ambulance Service</h3>
+                        <p>Get immediate access to the nearest available ambulance, saving 20-40 minutes during emergencies. Direct connection from user to ambulance and then to the most appropriate hospital.</p>
+                    </div>
+                </div>
+                <div class="feature-card">
+                    <img src="https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Medicine Reminders" class="feature-img">
+                    <div class="feature-content">
+                        <h3>Medicine Reminders</h3>
+                        <p>Never miss a dose with smart medication reminders tailored to your treatment schedule. Set custom alerts for different medications.</p>
+                    </div>
+                </div>
+                <div class="feature-card">
+                    <img src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Health Records" class="feature-img">
+                    <div class="feature-content">
+                        <h3>Digital Health Records</h3>
+                        <p>Securely store and access your medical history, prescriptions, and test results anytime, anywhere. Share with healthcare providers when needed.</p>
+                    </div>
+                </div>
             </div>
-          </div>
         </div>
-      </div>
     </section>
 
-    <!-- Services -->
-    <section id="services" class="py-16 bg-white">
-      <div class="max-w-screen-xl mx-auto px-6 md:px-8 text-center">
-        <h2 class="text-3xl font-bold text-blue-600">Our Services</h2>
-        <p class="text-gray-600 max-w-2xl mx-auto mt-2">Helping communities through direct support and education.</p>
-
-        <div class="grid md:grid-cols-3 gap-8 mt-8">
-          <article class="p-6 bg-gray-50 rounded-xl shadow-sm">
-            <h3 class="font-semibold">Emergency Ambulance</h3>
-            <p class="text-gray-600 mt-2">Rapid transport and triage to save lives when minutes matter.</p>
-          </article>
-          <article class="p-6 bg-gray-50 rounded-xl shadow-sm">
-            <h3 class="font-semibold">Medical Assistance</h3>
-            <p class="text-gray-600 mt-2">Connecting patients with donors and hospitals for urgent care.</p>
-          </article>
-          <article class="p-6 bg-gray-50 rounded-xl shadow-sm">
-            <h3 class="font-semibold">Awareness Programs</h3>
-            <p class="text-gray-600 mt-2">Workshops and campaigns that build resilient communities.</p>
-          </article>
+    <!-- How It Works Section -->
+    <section class="how-it-works" id="how-it-works">
+        <div class="container">
+            <div class="section-title">
+                <h2>How Maitree Works</h2>
+                <p>Simple steps to get the healthcare support you need</p>
+            </div>
+            <div class="steps">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <h3>Download & Register</h3>
+                    <p>Install the Maitree app and create your profile with basic health information.</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <h3>Set Up Your Health Profile</h3>
+                    <p>Add your medical conditions, current medications, and emergency contacts.</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <h3>Use When Needed</h3>
+                    <p>Request ambulance services, set medication reminders, or access your health records anytime.</p>
+                </div>
+            </div>
         </div>
-      </div>
     </section>
 
-    <!-- About -->
-    <section id="about" class="py-16">
-      <div class="max-w-screen-xl mx-auto px-6 md:px-8 text-center">
-        <h2 class="text-3xl font-bold text-blue-600">About Us</h2>
-        <p class="text-gray-600 max-w-3xl mx-auto mt-4">Donation For Maitree is a volunteer-driven non-profit focused on emergency medical services and community wellbeing. We aim to ensure help reaches those who need it most.</p>
-      </div>
-    </section>
-
-    <!-- Advertisement / Partnerships -->
-    <section id="partners" class="py-16 bg-white">
-      <div class="max-w-screen-xl mx-auto px-6 md:px-8">
-        <h2 class="text-3xl font-bold text-blue-600 text-center">Partnerships & Advertisements</h2>
-        <p class="text-gray-600 text-center mt-2">Partner with us to create impact.</p>
-
-        <div class="grid md:grid-cols-2 gap-6 mt-8">
-          <div class="p-6 border rounded-xl shadow-sm">
-            <img src="https://source.unsplash.com/800x500/?business,corporate" alt="corporate partnership" class="rounded-lg w-full h-44 object-cover" />
-            <h3 class="mt-4 font-semibold">Corporate Partnerships</h3>
-            <p class="text-gray-600 mt-1">Collaborate on CSR initiatives that deliver measurable outcomes.</p>
-          </div>
-          <div class="p-6 border rounded-xl shadow-sm">
-            <img src="https://source.unsplash.com/800x500/?startup,advertisement" alt="small business ads" class="rounded-lg w-full h-44 object-cover" />
-            <h3 class="mt-4 font-semibold">Small Business Ads</h3>
-            <p class="text-gray-600 mt-1">Affordable ad spaces to support local enterprises and our work.</p>
-          </div>
+    <!-- Download Section -->
+    <section class="download" id="download">
+        <div class="container">
+            <h2>Get Maitree Today</h2>
+            <p>Download our app and bring healthcare to your fingertips. Available in multiple regional languages.</p>
+            <div class="app-buttons">
+                <a href="https://drive.google.com/file/d/1FHAU3PVDnrGE5ki6JPL0yClgbyrwD28q/view?usp=sharing" class="app-button" target="_blank">
+                    <i class="fab fa-google-play"></i>
+                    <div>
+                        <small>Download</small>
+                        <div>User App</div>
+                    </div>
+                </a>
+                <a href="https://drive.google.com/file/d/1YXLe6UzKADhrspmygIxwoS6hTt7rvcNM/view?usp=sharing" class="app-button" target="_blank">
+                    <i class="fas fa-ambulance"></i>
+                    <div>
+                        <small>Download</small>
+                        <div>Driver App</div>
+                    </div>
+                </a>
+            </div>
         </div>
-      </div>
     </section>
 
-    <!-- Contact -->
-    <section id="contact" class="py-16 bg-gray-100">
-      <div class="max-w-screen-xl mx-auto px-6 md:px-8">
-        <div class="grid md:grid-cols-2 gap-8 items-center">
-          <div>
-            <h2 class="text-3xl font-bold text-blue-600">Get in touch</h2>
-            <p class="text-gray-600 mt-2">Questions about donations, partnerships, or volunteering? Drop us a message.</p>
-
-            <form id="contactForm" class="mt-6 space-y-4" action="#" method="post" onsubmit="event.preventDefault(); alert('This is a demo form. Replace with your backend endpoint.');">
-              <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
-                <input name="name" required placeholder="Your name" class="input-basic" />
-                <input name="email" type="email" required placeholder="Email address" class="input-basic" />
-              </div>
-              <textarea name="message" required placeholder="How can we help?" rows="5" class="input-basic w-full"></textarea>
-              <div class="flex items-center gap-3">
-                <button type="submit" class="btn-primary px-5 py-3">Send Message</button>
-                <button type="reset" class="btn-ghost px-4 py-3">Reset</button>
-              </div>
-            </form>
-          </div>
-
-          <div class="bg-white p-6 rounded-xl shadow-md">
-            <h3 class="font-semibold">Contact Details</h3>
-            <p class="text-sm text-gray-600 mt-2">For partnerships and press, email us or use the contact form.</p>
-            <ul class="mt-4 space-y-2 text-gray-700">
-              <li><strong>Email:</strong> <a href="MaitreeeOfficial@gmail.com" class="text-blue-600">MaitreeeOfficial@gmail.com</a></li>
-              <li><strong>Phone:</strong> <a href="tel:+91 8483090562" class="text-blue-600">+91 84830 90562</a></li>
-              <li><strong>Address:</strong> Willington Near Ajeenkya DY Patil University , Pune</li>
-            </ul>
-          </div>
+    <!-- Footer -->
+    <footer id="contact">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>Maitree</h3>
+                    <p>Bringing healthcare access to rural communities through technology and compassion.</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#features">Features</a></li>
+                        <li><a href="#how-it-works">How It Works</a></li>
+                        <li><a href="#download">Download</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Contact Us</h3>
+                    <ul>
+                        <li><i class="fas fa-map-marker-alt"></i> Willington, Near Ajeenkya DY Patil University, Pune, Maharashtra</li>
+                        <li><i class="fas fa-phone"></i> +91 1800-HELP-NOW</li>
+                        <li><i class="fas fa-envelope"></i> maitreeeofficial@gmail.com</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="innorepples">Work From Innorepples</div>
+            <div class="copyright">
+                <p>&copy; 2023 Maitree - Village Health Companion. All rights reserved.</p>
+            </div>
         </div>
-      </div>
-    </section>
-  </main>
+    </footer>
 
-  <footer class="bg-gray-900 text-gray-300 py-8">
-    <div class="max-w-screen-xl mx-auto px-6 md:px-8 grid md:grid-cols-3 gap-6">
-      <div>
-        <h4 class="text-white font-semibold">Donation For Maitree</h4>
-        <p class="text-sm italic mt-2">Donate for life</p>
-      </div>
-      <div>
-        <h4 class="text-white font-semibold">Quick Links</h4>
-        <ul class="mt-2 space-y-1 text-sm">
-          <li><a class="hover:text-white" href="#home">Home</a></li>
-          <li><a class="hover:text-white" href="#donation">Donation</a></li>
-          <li><a class="hover:text-white" href="#services">Services</a></li>
-        </ul>
-      </div>
-      <div>
-        <h4 class="text-white font-semibold">Other Services</h4>
-        <ul class="mt-2 space-y-1 text-sm">
-          <li><a class="hover:text-white" href="https://drive.google.com/file/d/19gVx-7KVqoskmX7LBQw_AkYBIqraeVGC/view?usp=sharing" target="_blank" rel="noopener noreferrer">User App</a></li>
-          <li><a class="hover:text-white" href="https://drive.google.com/file/d/1hoil-S03aAHnWUy0gtUdFInGVHblIeE7/view?usp=drive_link" target="_blank" rel="noopener noreferrer">Ambulance Driver App</a></li>
-        </ul>
-      </div>
-    </div>
-
-    <div class="text-center text-sm text-gray-500 mt-6">© 2025 Donation For Maitree. All Rights Reserved.</div>
-  </footer>
-
-  <script src="script.js" defer></script>
+    <script>
+        // Simple JavaScript for interactive elements
+        document.addEventListener('DOMContentLoaded', function() {
+            // Smooth scrolling for navigation links
+            document.querySelectorAll('nav a').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const targetId = this.getAttribute('href');
+                    const targetElement = document.querySelector(targetId);
+                    
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                });
+            });
+            
+            // CTA button functionality
+            const ctaButtons = document.querySelectorAll('.cta-button');
+            ctaButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    if(this.textContent.includes('Ambulance')) {
+                        alert('Emergency ambulance service would be activated here. In a real app, this would connect to the nearest available ambulance.');
+                    } else {
+                        alert('Thank you for your interest in Maitree! You would be directed to the appropriate service.');
+                    }
+                });
+            });
+            
+            // Feature card animation on scroll
+            const featureCards = document.querySelectorAll('.feature-card');
+            
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if(entry.isIntersecting) {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            }, { threshold: 0.1 });
+            
+            featureCards.forEach(card => {
+                card.style.opacity = '0';
+                card.style.transform = 'translateY(20px)';
+                card.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+                observer.observe(card);
+            });
+        });
+    </script>
 </body>
 </html>
- Make it responsive for all devices and add more details , make it better
